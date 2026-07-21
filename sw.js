@@ -1,10 +1,11 @@
 const CACHE_NAME = 'crypto-analyzer-v1';
 const ASSETS = [
   '/Cryptocurrency-Analyzer/',
-  '/Cryptocurrency-Analyzer/Cryptocurrency_Analyzer.html',
+  '/Cryptocurrency-Analyzer/index.html',
   '/Cryptocurrency-Analyzer/manifest.json',
   '/Cryptocurrency-Analyzer/icon-192.png',
-  '/Cryptocurrency-Analyzer/icon-512.png'
+  '/Cryptocurrency-Analyzer/icon-512.png',
+  '/Cryptocurrency-Analyzer/sw.js'
 ];
 
 self.addEventListener('install', (e) => {

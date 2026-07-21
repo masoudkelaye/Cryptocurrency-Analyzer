@@ -676,9 +676,16 @@ function updateUI(ticker, klines, fundingArr, premiumObj, lsRatioData, lsAcctDat
   if (klines && Array.isArray(klines) && klines.length > 10) {
     computeIndicators(klines, price);
   } else {
-    // If klines fail, try to compute from price only
+    // If klines fail, show clear message instead of "در حال محاسبه..."
     document.getElementById('rsiVal').textContent = '—';
     document.getElementById('smaTrend').textContent = '—';
+    document.getElementById('macdVal').textContent = '—';
+    document.getElementById('avgPrice').textContent = '—';
+    document.getElementById('sigDirection').textContent = 'در انتظار داده (داده بایننس دریافت نشد)';
+    document.getElementById('sigDirection').className = 'sig-value sig-wait';
+    document.getElementById('sigReason').textContent = 'داده‌های بایننس در دسترس نیستند. لطفاً اتصال اینترنت یا محدودیت جغرافیایی را بررسی کنید.';
+    document.getElementById('marketState').innerHTML = '<strong>وضعیت:</strong> داده‌های بازار در دسترس نیستند. لطفاً اتصال خود را بررسی کنید یا از VPN استفاده کنید.';
+    updateProbabilityUI(0, 'WAIT');
   }
 
   // Update calculator defaults with current price
@@ -912,7 +919,8 @@ function drawChart(klines) {
   ctx.fillText(fmtUSD(maxP), w - 6, padding.top + 12);
   ctx.fillText(fmtUSD(minP), w - 6, padding.top + chartH - 6);
   ctx.textAlign = 'center';
-  ctx.fillText(sym + ' — ' + document.getElementById('tfSelect').options[document.getElementById('tfSelect').selectedIndex].text, w / 2, h - 6);
+  const symForChart = document.getElementById('cryptoSelect') ? document.getElementById('cryptoSelect').value : '—';
+  ctx.fillText(symForChart + ' — ' + document.getElementById('tfSelect').options[document.getElementById('tfSelect').selectedIndex].text, w / 2, h - 6);
 }
 
 /* ====== Calculator ====== */
@@ -1060,5 +1068,5 @@ setTimeout(() => {
   }
 }, 1000);
 </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a1e8ce180c959239',t:'MTc4NDYyMjIyMg=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</body>
 </html>
