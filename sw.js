@@ -1,4 +1,4 @@
-const CACHE_NAME = 'crypto-analyzer-v1';
+const CACHE_NAME = 'crypto-analyzer-v2';
 const ASSETS = [
   '/Cryptocurrency-Analyzer/',
   '/Cryptocurrency-Analyzer/index.html',
