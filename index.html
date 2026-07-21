@@ -242,7 +242,7 @@
         <div class="sub" data-i18n="heroSub">آخرین به‌روزرسانی: <span id="lastUpdated">در حال بارگذاری...</span></div>
       </div>
       <div style="text-align:left;">
-        <label for="cryptoSelect" style="font-size:0.75rem;color:var(--text-dim);display:block;margin-bottom:4px;">ارز دیجیتال</label>
+        <label for="cryptoSelect" data-i18n="cryptoSelect" style="font-size:0.75rem;color:var(--text-dim);display:block;margin-bottom:4px;">ارز دیجیتال</label>
         <select id="cryptoSelect" style="background:var(--surface-2);color:var(--text);border:1px solid var(--border);border-radius:8px;padding:6px 10px;font-family:'Vazirmatn',sans-serif;font-size:0.85rem;cursor:pointer;min-width:140px;">
           <option value="BTCUSDT">بیت‌کوین (BTC)</option>
           <option value="ETHUSDT">اتریوم (ETH)</option>
@@ -251,7 +251,7 @@
           <option value="DOGEUSDT">دوج‌کوین (DOGE)</option>
         </select>
         <div style="margin-top:10px;"></div>
-        <label for="tfSelect" style="font-size:0.75rem;color:var(--text-dim);display:block;margin-bottom:4px;">تایم‌فریم تحلیل</label>
+        <label for="tfSelect" data-i18n="timeframeSelect" style="font-size:0.75rem;color:var(--text-dim);display:block;margin-bottom:4px;">تایم‌فریم تحلیل</label>
         <select id="tfSelect" style="background:var(--surface-2);color:var(--text);border:1px solid var(--border);border-radius:8px;padding:6px 10px;font-family:'Vazirmatn',sans-serif;font-size:0.85rem;cursor:pointer;min-width:140px;">
           <option value="15m">۱۵ دقیقه</option>
           <option value="1h">۱ ساعته</option>
@@ -315,13 +315,13 @@
     <div class="signal-grid">
       <div class="signal-card">
         <h4 data-i18n="signalDirectionTitle">جهت پیشنهادی (الگوریتمی)</h4>
-        <div class="sig-value" id="sigDirection">در حال محاسبه...</div>
+        <div class="sig-value" id="sigDirection">Calculating...</div>
         <div class="signal-meta" id="sigReason">—</div>
       </div>
       <div class="signal-card">
         <h4 data-i18n="marketStateTitle">وضعیت بازار بر اساس داده‌ها</h4>
         <div style="font-size:0.9rem;line-height:1.8;color:var(--text-dim);" id="marketState">
-          در حال بارگذاری داده‌های بازار...
+          Loading market data...
         </div>
       </div>
     </div>
@@ -329,8 +329,8 @@
       <div class="prob-bar-bg">
         <div id="probBar" class="prob-bar-fill wait" style="width:0%"></div>
       </div>
-      <div class="prob-label" id="probLabel">احتمال موفقیت: —%</div>
-      <label for="probThreshold" style="font-size:0.8rem;color:var(--text-dim);margin-top:8px;display:block;">حداقل احتمال برای ارسال نوتیفیکیشن (%):</label>
+      <div class="prob-label" id="probLabel">Success probability: —%</div>
+      <label for="probThreshold" style="font-size:0.8rem;color:var(--text-dim);margin-top:8px;display:block;">Minimum probability for notification trigger (%):</label>
       <input type="range" id="probThreshold" min="10" max="95" step="5" value="60" style="width:100%;margin-top:4px;" oninput="this.nextElementSibling.textContent = this.value + '%';">
       <span id="thresholdVal" style="font-size:0.85rem;color:var(--text);font-weight:700;">۶۰%</span>
     </div>
@@ -384,14 +384,14 @@
     </div>
     <div class="calc-output" id="calcResults">
       <div class="item"><div class="label" data-i18n="calcRiskAmt">مقدار ریسک (USDT)</div><div class="val" id="calcRiskAmt">—</div></div>
-      <div class="item"><div class="label">حجم پوزیشن (<span id="calcSym">BTC</span>)</div><div class="val" id="calcSize">—</div></div>
-      <div class="item"><div class="label">حجم معامله (USDT)</div><div class="val" id="calcNotional">—</div></div>
-      <div class="item"><div class="label">سود احتمالی</div><div class="val" style="color:var(--bull);" id="calcProfit">—</div></div>
-      <div class="item"><div class="label">ضرر در صورت استاپ</div><div class="val" style="color:var(--bear);" id="calcLoss">—</div></div>
-      <div class="item"><div class="label">نسبت ریسک/پاداش</div><div class="val" id="calcRatio">—</div></div>
+      <div class="item"><div class="label" data-i18n="calcSize">حجم پوزیشن (<span id="calcSym">BTC</span>)</div><div class="val" id="calcSize">—</div></div>
+      <div class="item"><div class="label" data-i18n="calcNotional">حجم معامله (USDT)</div><div class="val" id="calcNotional">—</div></div>
+      <div class="item"><div class="label" data-i18n="calcProfit">سود احتمالی</div><div class="val" style="color:var(--bull);" id="calcProfit">—</div></div>
+      <div class="item"><div class="label" data-i18n="calcLoss">ضرر در صورت استاپ</div><div class="val" style="color:var(--bear);" id="calcLoss">—</div></div>
+      <div class="item"><div class="label" data-i18n="calcRatio">نسبت ریسک/پاداش</div><div class="val" id="calcRatio">—</div></div>
     </div>
     <div style="margin-top:14px;padding-top:14px;border-top:1px solid var(--border);font-size:0.8rem;color:var(--text-dim);line-height:1.7;">
-      <strong style="color:var(--warning);">هشدار لوریج:</strong> هرچه لوریج بالاتر باشد، فاصله تا قیمت لیکویید شدن کمتر می‌شود. برای مثال، با لوریج ۵x و حرکت ۲۰٪ مخالف، موقعیت شما لیکویید می‌شود. همیشه قبل از ورود، قیمت لیکویید را محاسبه کنید.
+      <strong style="color:var(--warning);" data-i18n="leverageNote">هشدار لوریج:</strong> <span data-i18n="leverageNote">هرچه لوریج بالاتر باشد، فاصله تا قیمت لیکویید شدن کمتر می‌شود. برای مثال، با لوریج ۵x و حرکت ۲۰٪ مخالف، موقعیت شما لیکویید می‌شود. همیشه قبل از ورود، قیمت لیکویید را محاسبه کنید.</span>
     </div>
   </section>
 
@@ -425,9 +425,7 @@
 
 </main>
 
-<footer>
-  ساخته شده با هدف آموزش و تحلیل داده | Cryptocurrency Analyzer Dashboard | تاریخ به‌روزرسانی: ۲۱ ژوئیه ۲۰۲۶
-</footer>
+<footer data-i18n="footer">ساخته شده با هدف آموزش و تحلیل داده | Cryptocurrency Analyzer Dashboard | تاریخ به‌روزرسانی: ۲۱ ژوئیه ۲۰۲۶</footer>
 
 <script>
 /* ====== Bilingual Support ====== */
@@ -466,6 +464,12 @@ const i18n = {
     calcStop: 'حد ضرر فرضی (USDT)',
     calcLeverage: 'لوریج انتخابی',
     calcTake: 'حد سود فرضی (USDT)',
+    calcRiskAmt: 'مقدار ریسک (USDT)',
+    calcSize: 'حجم پوزیشن',
+    calcNotional: 'حجم معامله (USDT)',
+    calcProfit: 'سود احتمالی',
+    calcLoss: 'ضرر در صورت استاپ',
+    calcRatio: 'نسبت ریسک/پاداش',
     smartTradersTitle: 'بهترین تریدرها و داده‌های آن‌ها',
     smartTradersDesc: 'متأسفانه API عمومی بایننس برای Leaderboard (رتبه‌بندی تریدرهای برتر) از سال ۲۰۲۳ محدود شده و برای دسترسی به موقعیت‌های دقیق تریدرهای برتر نیاز به ورود با حساب کاربری دارد. با این حال، داده‌های زیر به عنوان جایگزین معتبر در دسترس هستند:',
     disclaimerTitle: 'هشدار مهم و سلب مسئولیت',
@@ -497,6 +501,7 @@ const i18n = {
   en: {
     tagline: 'Crypto Analysis Dashboard',
     live: 'Live',
+    logo: 'Cryptocurrency Analyzer',
     heroTitle: 'Cryptocurrency / USDT',
     heroSub: 'Last updated',
     high24: '24h High',
@@ -530,6 +535,10 @@ const i18n = {
     calcStop: 'Stop Loss (USDT)',
     calcTake: 'Take Profit (USDT)',
     calcLeverage: 'Leverage',
+    calcNotional: 'Notional Value (USDT)',
+    calcProfit: 'Potential Profit',
+    calcLoss: 'Loss at Stop Loss',
+    calcRatio: 'Risk/Reward Ratio',
     smartTradersTitle: 'Top Traders & Their Data',
     smartTradersDesc: 'Unfortunately, Binance public API for Leaderboard has been restricted since 2023 and requires user login to access exact positions of top traders. However, the following public alternatives are available:',
     disclaimerTitle: 'Important Disclaimer',
@@ -759,10 +768,10 @@ function updateUI(ticker, klines, fundingArr, premiumObj, lsRatioData, lsAcctDat
     document.getElementById('smaTrend').textContent = '—';
     document.getElementById('macdVal').textContent = '—';
     document.getElementById('avgPrice').textContent = '—';
-    document.getElementById('sigDirection').textContent = 'در انتظار داده (داده بایننس دریافت نشد)';
+    document.getElementById('sigDirection').textContent = 'Waiting for data (Binance data not received)';
     document.getElementById('sigDirection').className = 'sig-value sig-wait';
-    document.getElementById('sigReason').textContent = 'داده‌های بایننس در دسترس نیستند. لطفاً اتصال اینترنت یا محدودیت جغرافیایی را بررسی کنید.';
-    document.getElementById('marketState').innerHTML = '<strong>وضعیت:</strong> داده‌های بازار در دسترس نیستند. لطفاً اتصال خود را بررسی کنید یا از VPN استفاده کنید.';
+    document.getElementById('sigReason').textContent = 'Binance data is unavailable. Please check your internet connection or geographic restrictions.';
+    document.getElementById('marketState').innerHTML = '<strong>Status:</strong> Market data is unavailable. Please check your connection or use a VPN.';
     updateProbabilityUI(0, 'WAIT');
   }
 
@@ -809,8 +818,8 @@ function updateProbabilityUI(prob, signal) {
   if (signal === 'LONG') bar.className = 'prob-bar-fill long';
   else if (signal === 'SHORT') bar.className = 'prob-bar-fill short';
   else bar.className = 'prob-bar-fill wait';
-  const dirText = signal === 'LONG' ? 'لانگ' : signal === 'SHORT' ? 'شورت' : 'خنثی';
-  label.textContent = 'احتمال موفقیت سیگنال ' + dirText + ': ' + prob + '%';
+  const dirText = signal === 'LONG' ? 'LONG' : signal === 'SHORT' ? 'SHORT' : 'WAIT';
+  label.textContent = 'Success probability for ' + dirText + ' signal: ' + prob + '%';
 }
 
 function computeIndicators(klines, currentPrice) {
@@ -864,15 +873,15 @@ function computeIndicators(klines, currentPrice) {
 
   // Update UI
   document.getElementById('rsiVal').textContent = fmtNum(rsi, 1);
-  document.getElementById('rsiStatus').textContent = rsi > 70 ? 'اشباع خرید (نزولی)' : rsi < 30 ? 'اشباع فروش (صعودی)' : 'خنثی';
+  document.getElementById('rsiStatus').textContent = rsi > 70 ? 'Overbought (Bearish)' : rsi < 30 ? 'Oversold (Bullish)' : 'Neutral';
   document.getElementById('rsiStatus').className = 'status ' + (rsi > 70 ? 'short' : rsi < 30 ? 'long' : 'neutral');
 
-  document.getElementById('smaTrend').textContent = sma20 > sma50 ? 'صعودی (۲۰ > ۵۰)' : 'نزولی (۲۰ < ۵۰)';
-  document.getElementById('smaStatus').textContent = sma20 > sma50 ? 'روند صعودی' : 'روند نزولی';
+  document.getElementById('smaTrend').textContent = sma20 > sma50 ? 'Uptrend (20 > 50)' : 'Downtrend (20 < 50)';
+  document.getElementById('smaStatus').textContent = sma20 > sma50 ? 'Uptrend' : 'Downtrend';
   document.getElementById('smaStatus').className = 'status ' + (sma20 > sma50 ? 'long' : 'short');
 
   document.getElementById('macdVal').textContent = fmtNum(macd, 2);
-  document.getElementById('macdStatus').textContent = macd > 0 ? 'مثبت (صعودی)' : 'منفی (نزولی)';
+  document.getElementById('macdStatus').textContent = macd > 0 ? 'Positive (Bullish)' : 'Negative (Bearish)';
   document.getElementById('macdStatus').className = 'status ' + (macd > 0 ? 'long' : 'short');
 
   document.getElementById('avgPrice').textContent = fmtUSD(sma20);
@@ -883,41 +892,41 @@ function computeIndicators(klines, currentPrice) {
   const lsRatioNum = lsRatioText === '—' ? 1 : parseFloat(lsRatioText);
 
   let signal = 'WAIT';
-  let reason = 'شاخص‌ها متناقض یا نزدیک به خنثی هستند. منتظر تأیید بمانید.';
+  let reason = 'Indicators are conflicting or near neutral. Wait for confirmation.';
 
   const isBull = (rsi < 35 || (rsi < 50 && sma20 > sma50 && macd > 0)) && fundingRate <= 0.01 && lsRatioNum < 1.3;
   const isBear = (rsi > 65 || (rsi > 50 && sma20 < sma50 && macd < 0)) && fundingRate >= -0.01 && lsRatioNum > 1.3;
 
   if (isBear && !isBull) {
     signal = 'SHORT';
-    reason = 'RSI در ناحیه اشباع خرید / SMA نزولی / MACD منفی / فاندینگ مثبت بالا / نسبت لانگ/شورت بالا → احتمال اصلاح نزولی.';
+    reason = 'RSI in overbought zone / SMA downtrend / MACD negative / High positive funding / High long/short ratio → Probability of downward correction.';
   } else if (isBull && !isBear) {
     signal = 'LONG';
-    reason = 'RSI در ناحیه اشباع فروش / SMA صعودی / MACD مثبت / فاندینگ منفی یا خنثی / نسبت لانگ/شورت متعادل → احتمال بازگشت صعودی.';
+    reason = 'RSI in oversold zone / SMA uptrend / MACD positive / Negative or neutral funding / Balanced long/short ratio → Probability of upward reversal.';
   } else if (isBull && isBear) {
     signal = 'WAIT';
-    reason = 'شاخص‌ها متناقض هستند. بازار در وضعیت ابهام است. منتظر شکست سطح کلیدی باشید.';
+    reason = 'Indicators are contradictory. Market is in ambiguity. Wait for a key level breakout.';
   }
 
   const sigDir = document.getElementById('sigDirection');
-  sigDir.textContent = signal === 'LONG' ? 'لانگ (صعودی)' : signal === 'SHORT' ? 'شورت (نزولی)' : 'منتظر (خنثی)';
+  sigDir.textContent = signal === 'LONG' ? 'LONG' : signal === 'SHORT' ? 'SHORT' : 'WAIT';
   sigDir.className = 'sig-value ' + (signal === 'LONG' ? 'sig-long' : signal === 'SHORT' ? 'sig-short' : 'sig-wait');
-  document.getElementById('sigReason').innerHTML = `<strong>${signal === 'LONG' ? 'لانگ' : signal === 'SHORT' ? 'شورت' : 'منتظر'}</strong> — ${reason}`;
+  document.getElementById('sigReason').innerHTML = `<strong>${signal === 'LONG' ? 'LONG' : signal === 'SHORT' ? 'SHORT' : 'WAIT'}</strong> — ${reason}`;
 
   // Probability calculation and display
   const prob = getProbability(signal, rsi, sma20, sma50, macd, fundingRate, lsRatioNum);
   updateProbabilityUI(prob, signal);
 
   // Market state summary
-  const fundingText = fundingRate > 0 ? 'مثبت (لانگ‌ها پرداخت می‌کنند)' : fundingRate < 0 ? 'منفی (شورت‌ها پرداخت می‌کنند)' : 'خنثی';
-  const ratioText = lsRatioNum > 1.2 ? 'لانگ غالب' : lsRatioNum < 0.9 ? 'شورت غالب' : 'متعادل';
+  const fundingText = fundingRate > 0 ? 'Positive (Longs pay)' : fundingRate < 0 ? 'Negative (Shorts pay)' : 'Neutral';
+  const ratioText = lsRatioNum > 1.2 ? 'Long dominant' : lsRatioNum < 0.9 ? 'Short dominant' : 'Balanced';
   document.getElementById('marketState').innerHTML = `
-    <strong>روند تکنیکال:</strong> ${sma20 > sma50 ? 'صعودی' : 'نزولی'} (SMA 20 vs 50)<br>
-    <strong>RSI:</strong> ${fmtNum(rsi, 1)} (${rsi > 70 ? 'اشباع خرید' : rsi < 30 ? 'اشباع فروش' : 'خنثی'})<br>
-    <strong>MACD:</strong> ${fmtNum(macd, 2)} (${macd > 0 ? 'مثبت' : 'منفی'})<br>
-    <strong>فاندینگ:</strong> ${fmtNum(fundingRate * 100, 4)}% (${fundingText})<br>
-    <strong>نسبت لانگ/شورت:</strong> ${fmtNum(lsRatioNum, 2)} (${ratioText})<br>
-    <strong>نتیجه:</strong> ${signal === 'LONG' ? 'تمایل به صعود بر اساس داده‌های فعلی، اما با احتیاط.' : signal === 'SHORT' ? 'تمایل به نزول بر اساس داده‌های فعلی، اما با احتیاط.' : 'بازار در حالت انتظار؛ شکست سطح کلیدی می‌تواند جهت را مشخص کند.'}
+    <strong>Technical Trend:</strong> ${sma20 > sma50 ? 'Uptrend' : 'Downtrend'} (SMA 20 vs 50)<br>
+    <strong>RSI:</strong> ${fmtNum(rsi, 1)} (${rsi > 70 ? 'Overbought' : rsi < 30 ? 'Oversold' : 'Neutral'})<br>
+    <strong>MACD:</strong> ${fmtNum(macd, 2)} (${macd > 0 ? 'Positive' : 'Negative'})<br>
+    <strong>Funding:</strong> ${fmtNum(fundingRate * 100, 4)}% (${fundingText})<br>
+    <strong>Long/Short Ratio:</strong> ${fmtNum(lsRatioNum, 2)} (${ratioText})<br>
+    <strong>Conclusion:</strong> ${signal === 'LONG' ? 'Upward tendency based on current data, but with caution.' : signal === 'SHORT' ? 'Downward tendency based on current data, but with caution.' : 'Market is in waiting mode; a key level breakout can clarify the direction.'}
   `;
 }
 
@@ -992,7 +1001,7 @@ function drawChart(klines) {
   ctx.fillStyle = '#8ca0b8';
   ctx.font = '10px "JetBrains Mono", monospace';
   ctx.textAlign = 'left';
-  ctx.fillText('قیمت بسته شدن ' + document.getElementById('tfSelect').options[document.getElementById('tfSelect').selectedIndex].text, padding.left, 14);
+  ctx.fillText('Closing price ' + document.getElementById('tfSelect').options[document.getElementById('tfSelect').selectedIndex].text, padding.left, 14);
   ctx.textAlign = 'right';
   ctx.fillText(fmtUSD(maxP), w - 6, padding.top + 12);
   ctx.fillText(fmtUSD(minP), w - 6, padding.top + chartH - 6);
@@ -1102,8 +1111,8 @@ updateUI = function(...args) {
   const threshold = thresholdInput ? parseInt(thresholdInput.value) : 60;
 
   let signalType = null;
-  if (sigText.includes('لانگ')) signalType = 'LONG';
-  else if (sigText.includes('شورت')) signalType = 'SHORT';
+  if (sigText.includes('LONG')) signalType = 'LONG';
+  else if (sigText.includes('SHORT')) signalType = 'SHORT';
 
   if (signalType) {
     // Read current indicator values from DOM for probability calculation
@@ -1146,5 +1155,5 @@ setTimeout(() => {
   }
 }, 1000);
 </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a1ed112dafb22bb7',t:'MTc4NDY2NjkxMg=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a1ed2782d91cb570',t:'MTc4NDY2NzgyNw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
