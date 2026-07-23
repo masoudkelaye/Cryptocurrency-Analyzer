@@ -72,10 +72,10 @@ footer{text-align:center;padding:40px 20px;color:#8ca0b8;font-size:.8rem;border-
     <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;flex-wrap:wrap;">
       <div>
         <h2 id="heroTitle">ارز دیجیتال / تتر (<span id="symLabel">BTCUSDT</span>)</h2>
-        <div style="color:#8ca0b8;font-size:.85rem;margin-top:4px;">آخرین به‌روزرسانی: <span id="lastUpd">در حال بارگذاری...</span></div>
+        <div style="color:#8ca0b8;font-size:.85rem;margin-top:4px;" data-i18n="heroSub">آخرین به‌روزرسانی: <span id="lastUpd">در حال بارگذاری...</span></div>
       </div>
       <div style="text-align:left;">
-        <label for="cryptoDrop" style="font-size:.75rem;color:#8ca0b8;display:block;margin-bottom:4px;">ارز دیجیتال</label>
+        <label for="cryptoDrop" data-i18n="cryptoSelect" style="font-size:.75rem;color:#8ca0b8;display:block;margin-bottom:4px;">ارز دیجیتال</label>
         <select id="cryptoDrop" style="padding:6px 10px;border-radius:8px;border:1px solid #16263d;background:#080f1a;color:#e8f0fa;font-family:inherit;font-size:.85rem;cursor:pointer;min-width:140px;">
           <option value="BTCUSDT">بیت‌کوین (BTC)</option>
           <option value="ETHUSDT">اتریوم (ETH)</option>
@@ -84,7 +84,7 @@ footer{text-align:center;padding:40px 20px;color:#8ca0b8;font-size:.8rem;border-
           <option value="DOGEUSDT">دوج‌کوین (DOGE)</option>
         </select>
         <div style="margin-top:10px;"></div>
-        <label for="tfDrop" style="font-size:.75rem;color:#8ca0b8;display:block;margin-bottom:4px;">تایم‌فریم تحلیل</label>
+        <label for="tfDrop" data-i18n="timeframeSelect" style="font-size:.75rem;color:#8ca0b8;display:block;margin-bottom:4px;">تایم‌فریم تحلیل</label>
         <select id="tfDrop" style="padding:6px 10px;border-radius:8px;border:1px solid #16263d;background:#080f1a;color:#e8f0fa;font-family:inherit;font-size:.85rem;cursor:pointer;min-width:140px;">
           <option value="15m">۱۵ دقیقه</option>
           <option value="1h">۱ ساعته</option>
@@ -98,21 +98,21 @@ footer{text-align:center;padding:40px 20px;color:#8ca0b8;font-size:.8rem;border-
       <div id="heroChange" class="price-change">—</div>
     </div>
     <div class="stats" id="statsGrid">
-      <div class="stat-card"><div class="label">بالاترین ۲۴ ساعته</div><div class="val" id="high24">—</div></div>
-      <div class="stat-card"><div class="label">پایین‌ترین ۲۴ ساعته</div><div class="val" id="low24">—</div></div>
-      <div class="stat-card"><div class="label">حجم ۲۴ ساعته</div><div class="val" id="vol24">—</div></div>
-      <div class="stat-card"><div class="label">فاندینگ ریت</div><div class="val" id="fundRate">—</div><div style="font-size:.78rem;color:#8ca0b8;" id="fundSub">—</div></div>
+      <div class="stat-card"><div class="label" data-i18n="high24">بالاترین ۲۴ ساعته</div><div class="val" id="high24">—</div></div>
+      <div class="stat-card"><div class="label" data-i18n="low24">پایین‌ترین ۲۴ ساعته</div><div class="val" id="low24">—</div></div>
+      <div class="stat-card"><div class="label" data-i18n="vol24">حجم ۲۴ ساعته</div><div class="val" id="vol24">—</div></div>
+      <div class="stat-card"><div class="label" data-i18n="fundingLabel">فاندینگ ریت</div><div class="val" id="fundRate">—</div><div style="font-size:.78rem;color:#8ca0b8;" id="fundSub">—</div></div>
     </div>
   </section>
 
   <section class="card" aria-label="Indicators">
-    <h2 style="font-size:1.05rem;font-weight:800;letter-spacing:-.02em;margin-bottom:4px;">شاخص‌های تکنیکال (<span id="tfLbl">۴ ساعته</span>)</h2>
+    <h2 style="font-size:1.05rem;font-weight:800;letter-spacing:-.02em;margin-bottom:4px;" data-i18n="indicatorsTitle">شاخص‌های تکنیکال (<span id="tfLbl">۴ ساعته</span>)</h2>
     <p style="font-size:.82rem;color:#8ca0b8;margin-bottom:14px;">RSI، SMA، MACD بر اساس داده‌های زنده.</p>
     <div class="indicators">
-      <div class="ind"><div class="name">RSI (14)</div><div class="value" id="rsiVal">—</div><div class="status neutral" id="rsiSt">منتظر</div></div>
-      <div class="ind"><div class="name">SMA 20 vs 50</div><div class="value" id="smaTrend">—</div><div class="status neutral" id="smaSt">منتظر</div></div>
-      <div class="ind"><div class="name">MACD</div><div class="value" id="macdVal">—</div><div class="status neutral" id="macdSt">منتظر</div></div>
-      <div class="ind"><div class="name">میانگین قیمت</div><div class="value" id="avgPrice">—</div></div>
+      <div class="ind"><div class="name" data-i18n="rsiName">RSI (14)</div><div class="value" id="rsiVal">—</div><div class="status neutral" id="rsiSt">منتظر</div></div>
+      <div class="ind"><div class="name" data-i18n="smaName">SMA 20 vs 50</div><div class="value" id="smaTrend">—</div><div class="status neutral" id="smaSt">منتظر</div></div>
+      <div class="ind"><div class="name" data-i18n="macdName">MACD</div><div class="value" id="macdVal">—</div><div class="status neutral" id="macdSt">منتظر</div></div>
+      <div class="ind"><div class="name" data-i18n="avgName">میانگین قیمت</div><div class="value" id="avgPrice">—</div></div>
     </div>
     <div class="chart-wrap" style="margin-top:14px;position:relative;">
       <canvas id="priceChart"></canvas>
@@ -120,66 +120,66 @@ footer{text-align:center;padding:40px 20px;color:#8ca0b8;font-size:.8rem;border-
   </section>
 
   <section class="card" aria-label="Market">
-    <h2 style="font-size:1.05rem;font-weight:800;letter-spacing:-.02em;margin-bottom:4px;">داده‌های بازار و احساسات</h2>
+    <h2 style="font-size:1.05rem;font-weight:800;letter-spacing:-.02em;margin-bottom:4px;" data-i18n="marketTitle">داده‌های بازار و احساسات</h2>
     <p style="font-size:.82rem;color:#8ca0b8;margin-bottom:14px;">نسبت لانگ/شورت، فاندینگ، پریمیوم.</p>
     <div class="indicators">
-      <div class="ind"><div class="name">نسبت لانگ/شورت (موقعیت)</div><div class="value" id="lsRatio">—</div><div style="font-size:.78rem;color:#8ca0b8;" id="lsSub">—</div></div>
-      <div class="ind"><div class="name">نسبت حساب لانگ/شورت</div><div class="value" id="lsAcct">—</div><div style="font-size:.78rem;color:#8ca0b8;" id="lsAccSub">—</div></div>
-      <div class="ind"><div class="name">پریمیوم ایندکس</div><div class="value" id="premium">—</div></div>
-      <div class="ind"><div class="name">نرخ فاندینگ ۸ ساعته</div><div class="value" id="fundVal">—</div></div>
+      <div class="ind"><div class="name" data-i18n="lsRatioName">نسبت لانگ/شورت (موقعیت)</div><div class="value" id="lsRatio">—</div><div style="font-size:.78rem;color:#8ca0b8;" id="lsSub">—</div></div>
+      <div class="ind"><div class="name" data-i18n="lsAccountName">نسبت حساب لانگ/شورت</div><div class="value" id="lsAcct">—</div><div style="font-size:.78rem;color:#8ca0b8;" id="lsAccSub">—</div></div>
+      <div class="ind"><div class="name" data-i18n="premiumName">پریمیوم ایندکس</div><div class="value" id="premium">—</div></div>
+      <div class="ind"><div class="name" data-i18n="fundingRateName">نرخ فاندینگ ۸ ساعته</div><div class="value" id="fundVal">—</div></div>
     </div>
   </section>
 
   <section class="signal-box" aria-label="Signal Engine">
-    <h3 style="font-weight:900;letter-spacing:-.03em;font-size:1.2rem;color:#f0b429;margin-bottom:14px;">موتور سیگنال الگوریتمی</h3>
-    <p style="font-size:.78rem;color:#8ca0b8;margin-bottom:14px;">این خروجی صرفاً بر اساس فرمول‌های تکنیکال است و <strong style="color:#f0a429;">مشاوره مالی محسوب نمی‌شود</strong>.</p>
+    <h3 style="font-weight:900;letter-spacing:-.03em;font-size:1.2rem;color:#f0b429;margin-bottom:14px;" data-i18n="signalTitle">موتور سیگنال الگوریتمی</h3>
+    <p style="font-size:.78rem;color:#8ca0b8;margin-bottom:14px;" data-i18n="signalSub">این خروجی صرفاً بر اساس فرمول‌های تکنیکال است و <strong style="color:#f0a429;">مشاوره مالی محسوب نمی‌شود</strong>.</p>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
       <div class="signal-card">
-        <h4>جهت پیشنهادی (الگوریتمی)</h4>
-        <div class="sig-value" id="sigDir">Calculating...</div>
-        <div style="margin-top:12px;padding-top:12px;border-top:1px solid #16263d;font-size:.82rem;color:#8ca0b8;line-height:1.6;" id="sigReason">—</div>
+        <h4 data-i18n="signalDirectionTitle">جهت پیشنهادی (الگوریتمی)</h4>
+        <div class="sig-value" id="sigDir" data-i18n="sigDir">در حال محاسبه...</div>
+        <div style="margin-top:12px;padding-top:12px;border-top:1px solid #16263d;font-size:.82rem;color:#8ca0b8;line-height:1.6;" id="sigReason" data-i18n="sigReason">—</div>
       </div>
       <div class="signal-card">
-        <h4>وضعیت بازار بر اساس داده‌ها</h4>
-        <div style="font-size:.9rem;line-height:1.8;color:#8ca0b8;" id="marketSt">Loading market data...</div>
+        <h4 data-i18n="marketStateTitle">وضعیت بازار بر اساس داده‌ها</h4>
+        <div style="font-size:.9rem;line-height:1.8;color:#8ca0b8;" id="marketSt" data-i18n="marketSt">در حال بارگذاری داده‌ها...</div>
       </div>
     </div>
     <div class="prob-wrap" style="margin-top:14px;padding:10px;background:rgba(255,255,255,.05);border-radius:10px;">
       <div class="prob-bg"><div id="probBar" class="prob-fill wait" style="width:0%"></div></div>
-      <div class="prob-label" id="probLbl">Success probability: —%</div>
-      <label for="probThresh" style="font-size:.8rem;color:#8ca0b8;margin-top:8px;display:block;">Minimum probability for notification trigger (%):</label>
+      <div class="prob-label" id="probLbl" data-i18n="probLabel">احتمال موفقیت سیگنال: —%</div>
+      <label for="probThresh" data-i18n="probThreshLabel" style="font-size:.8rem;color:#8ca0b8;margin-top:8px;display:block;">حداقل احتمال برای فعال‌سازی اعلان (%):</label>
       <input type="range" id="probThresh" min="10" max="95" step="5" value="60" style="width:100%;margin-top:4px;" oninput="this.nextElementSibling.textContent=this.value+'%';">
       <span id="thresholdVal" style="font-size:.85rem;color:#e8f0fa;font-weight:700;">۶۰%</span>
     </div>
     <div style="margin-top:18px;padding-top:18px;border-top:1px solid #16263d;font-size:.82rem;color:#8ca0b8;line-height:1.6;">
-      <strong>نکات مهم برای ورود/خروج:</strong>
+      <strong data-i18n="signalNotes">نکات مهم برای ورود/خروج:</strong>
       <ul style="margin:8px 0 0 18px;padding:0;">
-        <li>ورود نزدیک به <strong>حمایت/مقاومت کلیدی</strong> انجام شود.</li>
-        <li>حد ضرر (<span style="color:#ff4d6d;">Stop Loss</span>) حداکثر ۲ تا ۳ درصد از قیمت ورود.</li>
-        <li>حد سود (<span style="color:#26e07f;">Take Profit</span>) بر اساس مقاومت بعدی یا نسبت ریسک/پاداش حداقل ۱:۲.</li>
-        <li><strong style="color:#f0a429;">لوریج:</strong> در معاملات اینترادی، لوریج بالاتر از ۵ تا ۱۰ برابر ریسک لیکویید شدن را به شدت افزایش می‌دهد.</li>
+        <li data-i18n="supportNote">ورود نزدیک به <strong>حمایت/مقاومت کلیدی</strong> انجام شود.</li></li>
+        <li data-i18n="stopNote">حد ضرر (<span style="color:#ff4d6d;">Stop Loss</span>) حداکثر ۲ تا ۳ درصد از قیمت ورود.</li></li>
+        <li data-i18n="takeNote">حد سود (<span style="color:#26e07f;">Take Profit</span>) بر اساس مقاومت بعدی یا نسبت ریسک/پاداش حداقل ۱:۲.</li></li>
+        <li data-i18n="leverageNote"><strong style="color:#f0a429;">لوریج:</strong> در معاملات اینترادی، لوریج بالاتر از ۵ تا ۱۰ برابر ریسک لیکویید شدن را به شدت افزایش می‌دهد.</li></li>
       </ul>
     </div>
   </section>
 
   <section class="card" aria-label="Calculator">
-    <h2 id="calcTitle">ماشین حساب معامله (مثال عملی)</h2>
-    <p style="font-size:.82rem;color:#8ca0b8;margin-bottom:14px;">این بخش برای آموزش است. هیچ توصیه مالی در این محاسبات وجود ندارد.</p>
+    <h2 id="calcTitle" data-i18n="calcTitle">ماشین حساب معامله (مثال عملی)</h2>
+    <p style="font-size:.82rem;color:#8ca0b8;margin-bottom:14px;" data-i18n="calcDesc">این بخش برای آموزش است. هیچ توصیه مالی در این محاسبات وجود ندارد.</p>
     <div class="calc-grid">
-      <div><label for="calcCap">سرمایه در دسترس (USDT)</label><input type="number" id="calcCap" value="1000" step="100"></div>
-      <div><label for="calcRisk">ریسک معامله (% از سرمایه)</label><input type="number" id="calcRisk" value="2" step="0.5" min="0.5" max="10"></div>
-      <div><label for="calcEnt">قیمت ورود فرضی (USDT)</label><input type="number" id="calcEnt" value="0" step="0.01"></div>
-      <div><label for="calcStop">حد ضرر فرضی (USDT)</label><input type="number" id="calcStop" value="0" step="0.01"></div>
-      <div><label for="calcLev">لوریج انتخابی</label><select id="calcLev"><option value="1">۱x</option><option value="3">۳x</option><option value="5" selected>۵x</option><option value="10">۱۰x</option><option value="20">۲۰x</option></select></div>
-      <div><label for="calcTake">حد سود فرضی (USDT)</label><input type="number" id="calcTake" value="0" step="0.01"></div>
+      <div><label for="calcCap" data-i18n="calcCapital">سرمایه در دسترس (USDT)</label><input type="number" id="calcCap" value="1000" step="100"></div>
+      <div><label for="calcRisk" data-i18n="calcRisk">ریسک معامله (% از سرمایه)</label><input type="number" id="calcRisk" value="2" step="0.5" min="0.5" max="10"></div>
+      <div><label for="calcEnt" data-i18n="calcEntry">قیمت ورود فرضی (USDT)</label><input type="number" id="calcEnt" value="0" step="0.01"></div>
+      <div><label for="calcStop" data-i18n="calcStop">حد ضرر فرضی (USDT)</label><input type="number" id="calcStop" value="0" step="0.01"></div>
+      <div><label for="calcLev" data-i18n="calcLeverage">لوریج انتخابی</label><select id="calcLev"><option value="1">۱x</option><option value="3">۳x</option><option value="5" selected>۵x</option><option value="10">۱۰x</option><option value="20">۲۰x</option></select></div>
+      <div><label for="calcTake" data-i18n="calcTake">حد سود فرضی (USDT)</label><input type="number" id="calcTake" value="0" step="0.01"></div>
     </div>
     <div class="calc-output">
-      <div class="item"><div class="label">مقدار ریسک (USDT)</div><div class="val" id="calcRiskAmt">—</div></div>
-      <div class="item"><div class="label">حجم پوزیشن (<span id="calcSym">BTC</span>)</div><div class="val" id="calcSize">—</div></div>
-      <div class="item"><div class="label">حجم معامله (USDT)</div><div class="val" id="calcNot">—</div></div>
-      <div class="item"><div class="label">سود احتمالی</div><div class="val" style="color:#26e07f;" id="calcProf">—</div></div>
-      <div class="item"><div class="label">ضرر در صورت استاپ</div><div class="val" style="color:#ff4d6d;" id="calcLoss">—</div></div>
-      <div class="item"><div class="label">نسبت ریسک/پاداش</div><div class="val" id="calcRatio">—</div></div>
+      <div class="item"><div class="label" data-i18n="calcRiskAmt">مقدار ریسک (USDT)</div><div class="val" id="calcRiskAmt">—</div></div>
+      <div class="item"><div class="label" data-i18n="calcSize">حجم پوزیشن (<span id="calcSym">BTC</span>)</div><div class="val" id="calcSize">—</div></div>
+      <div class="item"><div class="label" data-i18n="calcNotional">حجم معامله (USDT)</div><div class="val" id="calcNot">—</div></div>
+      <div class="item"><div class="label" data-i18n="calcProfit">سود احتمالی</div><div class="val" style="color:#26e07f;" id="calcProf">—</div></div>
+      <div class="item"><div class="label" data-i18n="calcLoss">ضرر در صورت استاپ</div><div class="val" style="color:#ff4d6d;" id="calcLoss">—</div></div>
+      <div class="item"><div class="label" data-i18n="calcRatio">نسبت ریسک/پاداش</div><div class="val" id="calcRatio">—</div></div>
     </div>
     <div style="margin-top:14px;padding-top:14px;border-top:1px solid #16263d;font-size:.8rem;color:#8ca0b8;line-height:1.7;">
       <strong style="color:#f0a429;">هشدار لوریج:</strong> هرچه لوریج بالاتر باشد، فاصله تا قیمت لیکویید شدن کمتر می‌شود. برای مثال، با لوریج ۵x و حرکت ۲۰٪ مخالف، موقعیت شما لیکویید می‌شود. همیشه قبل از ورود، قیمت لیکویید را محاسبه کنید.
@@ -187,8 +187,8 @@ footer{text-align:center;padding:40px 20px;color:#8ca0b8;font-size:.8rem;border-
   </section>
 
   <section class="card" aria-label="Traders">
-    <h2>بهترین تریدرها و داده‌های آن‌ها</h2>
-    <p style="font-size:.82rem;color:#8ca0b8;margin-bottom:14px;">داده‌های دقیق موقعیت‌های تریدرهای برتر (Leaderboard) به دلیل محدودیت‌های API در دسترس نیست. داده‌های زیر جایگزین معتبر هستند:</p>
+    <h2 data-i18n="smartTradersTitle">بهترین تریدرها و داده‌های آن‌ها</h2>
+    <p style="font-size:.82rem;color:#8ca0b8;margin-bottom:14px;" data-i18n="smartTradersDesc">داده‌های دقیق موقعیت‌های تریدرهای برتر (Leaderboard) به دلیل محدودیت‌های API در دسترس نیست. داده‌های زیر جایگزین معتبر هستند:</p>
     <ul style="margin:10px 0 0 18px;padding:0;font-size:.9rem;color:#8ca0b8;line-height:1.9;">
       <li><strong style="color:#e8f0fa;">نسبت موقعیت لانگ/شورت برترین تریدرها</strong>: نسبت موقعیت‌های باز برترین تریدرها بر اساس حجم.</li>
       <li><strong style="color:#e8f0fa;">نسبت حساب لانگ/شورت</strong>: بر اساس تعداد حساب‌ها (نه حجم).</li>
@@ -199,17 +199,185 @@ footer{text-align:center;padding:40px 20px;color:#8ca0b8;font-size:.8rem;border-
     </div>
   </section>
 
-  <aside class="disclaimer" role="note">
-    <strong>⚠️ هشدار مهم و سلب مسئولیت:</strong><br>
+  <aside class="disclaimer" role="note" data-i18n="disclaimerText">
+    <strong data-i18n="disclaimerTitle">⚠️ هشدار مهم و سلب مسئولیت:</strong><br>
     این داشبورد صرفاً یک ابزار آموزشی و اطلاعاتی است. هیچ‌یک از داده‌ها، سیگنال‌ها یا محاسبات ارائه شده در این صفحه مشاوره مالی، توصیه سرمایه‌گذاری، یا دستور معامله نیست. بازار ارزهای دیجیتال بسیار پرنوسان و پرریسک است و ممکن است سرمایه شما در کوتاه‌مدت یا بلندمدت از بین برود.<br><br>
-    <strong>لوریج و ریسک لیکویید:</strong> استفاده از لوریج (به‌ویژه بالاتر از ۵x) ریسک از دست دادن کل سرمایه در یک حرکت کوچک قیمت را به شدت افزایش می‌دهد.<br><br>
-    <strong>منابع داده:</strong> داده‌های قیمت و شاخص‌ها از API عمومی CoinGecko دریافت می‌شوند و ممکن است با تأخیر همراه باشند.
+    <strong data-i18n="leverageWarning">لوریج و ریسک لیکویید:</strong> استفاده از لوریج (به‌ویژه بالاتر از ۵x) ریسک از دست دادن کل سرمایه در یک حرکت کوچک قیمت را به شدت افزایش می‌دهد.<br><br>
+    <strong data-i18n="sourcesNote">منابع داده:</strong> داده‌های قیمت و شاخص‌ها از API عمومی CoinGecko دریافت می‌شوند و ممکن است با تأخیر همراه باشند.
   </aside>
 
 </main>
-<footer data-i18n="foot">ساخته شده با هدف آموزش و تحلیل داده | Cryptocurrency Analyzer Dashboard | تاریخ به‌روزرسانی: ۲۱ ژوئیه ۲۰۲۶</footer>
+<footer data-i18n="footer">ساخته شده با هدف آموزش و تحلیل داده | Cryptocurrency Analyzer Dashboard | تاریخ به‌روزرسانی: ۲۱ ژوئیه ۲۰۲۶</footer>
 
 <script>
+
+const i18n = {
+  fa: {
+    heroTitle: 'ارز دیجیتال / تتر (<span id="symLabel">BTCUSDT</span>)',
+    heroSub: 'آخرین به‌روزرسانی',
+    cryptoSelect: 'ارز دیجیتال',
+    timeframeSelect: 'تایم‌فریم تحلیل',
+    high24: 'بالاترین ۲۴ ساعته',
+    low24: 'پایین‌ترین ۲۴ ساعته',
+    vol24: 'حجم ۲۴ ساعته',
+    fundingLabel: 'فاندینگ ریت',
+    indicatorsTitle: 'شاخص‌های تکنیکال',
+    indicatorsDesc: 'RSI، SMA، MACD بر اساس داده‌های زنده.',
+    rsiName: 'RSI (14)',
+    smaName: 'SMA 20 vs 50',
+    macdName: 'MACD',
+    avgName: 'میانگین قیمت',
+    marketTitle: 'داده‌های بازار و احساسات',
+    marketDesc: 'نسبت لانگ/شورت، فاندینگ، پریمیوم.',
+    lsRatioName: 'نسبت لانگ/شورت (موقعیت)',
+    lsAccountName: 'نسبت حساب لانگ/شورت',
+    premiumName: 'پریمیوم ایندکس',
+    fundingRateName: 'نرخ فاندینگ ۸ ساعته',
+    signalTitle: 'موتور سیگنال الگوریتمی',
+    signalSub: 'این خروجی صرفاً بر اساس فرمول‌های تکنیکال است و مشاوره مالی محسوب نمی‌شود.',
+    signalDirectionTitle: 'جهت پیشنهادی (الگوریتمی)',
+    marketStateTitle: 'وضعیت بازار بر اساس داده‌ها',
+    sigDir: 'در حال محاسبه...',
+    sigReason: '—',
+    probLabel: 'احتمال موفقیت سیگنال: —%',
+    probThreshLabel: 'حداقل احتمال برای فعال‌سازی اعلان (%):',
+    thresholdVal: '۶۰%',
+    calcTitle: 'ماشین حساب معامله (مثال عملی)',
+    calcDesc: 'این بخش برای آموزش است. هیچ توصیه مالی در این محاسبات وجود ندارد.',
+    calcCapital: 'سرمایه در دسترس (USDT)',
+    calcRisk: 'ریسک معامله (% از سرمایه)',
+    calcEntry: 'قیمت ورود فرضی (USDT)',
+    calcStop: 'حد ضرر فرضی (USDT)',
+    calcLeverage: 'لوریج انتخابی',
+    calcTake: 'حد سود فرضی (USDT)',
+    calcRiskAmt: 'مقدار ریسک (USDT)',
+    calcSize: 'حجم پوزیشن',
+    calcNotional: 'حجم معامله (USDT)',
+    calcProfit: 'سود احتمالی',
+    calcLoss: 'ضرر در صورت استاپ',
+    calcRatio: 'نسبت ریسک/پاداش',
+    leverageNote: 'هشدار لوریج: هرچه لوریج بالاتر باشد، فاصله تا قیمت لیکویید شدن کمتر می‌شود. برای مثال، با لوریج ۵x و حرکت ۲۰٪ مخالف، موقعیت شما لیکویید می‌شود. همیشه قبل از ورود، قیمت لیکویید را محاسبه کنید.',
+    smartTradersTitle: 'بهترین تریدرها و داده‌های آن‌ها',
+    smartTradersDesc: 'داده‌های دقیق موقعیت‌های تریدرهای برتر (Leaderboard) به دلیل محدودیت‌های API در دسترس نیست. داده‌های زیر جایگزین معتبر هستند:',
+    tradersLimit: 'داده‌های دقیق موقعیت‌های تریدرهای برتر (Leaderboard) به دلیل محدودیت‌های API در دسترس نیست. اطلاعات ارائه شده بر اساس نسبت‌های عمومی بازار است.',
+    disclaimerTitle: 'هشدار مهم و سلب مسئولیت',
+    disclaimerText: 'این داشبورد صرفاً یک ابزار آموزشی و اطلاعاتی است. هیچ‌یک از داده‌ها، سیگنال‌ها یا محاسبات ارائه شده در این صفحه مشاوره مالی، توصیه سرمایه‌گذاری، یا دستور معامله نیست. بازار ارزهای دیجیتال بسیار پرنوسان و پرریسک است و ممکن است سرمایه شما در کوتاه‌مدت یا بلندمدت از بین برود.',
+    leverageWarning: 'استفاده از لوریج (به‌ویژه بالاتر از ۵x) ریسک از دست دادن کل سرمایه در یک حرکت کوچک قیمت را به شدت افزایش می‌دهد. همیشه قبل از ورود به هر معامله، قیمت لیکویید، حد ضرر، و نسبت ریسک به پاداش را شخصاً بررسی کنید.',
+    sourcesNote: 'داده‌های قیمت و شاخص‌ها از API عمومی CoinGecko دریافت می‌شوند و ممکن است با تأخیر همراه باشند.',
+    footer: 'ساخته شده با هدف آموزش و تحلیل داده | Cryptocurrency Analyzer Dashboard',
+    live: 'زنده',
+    logo: 'Cryptocurrency Analyzer',
+    cryptoDropOptionBTC: 'بیت‌کوین (BTC)',
+    cryptoDropOptionETH: 'اتریوم (ETH)',
+    cryptoDropOptionSOL: 'سولانا (SOL)',
+    cryptoDropOptionXRP: 'ریپل (XRP)',
+    cryptoDropOptionDOGE: 'دوج‌کوین (DOGE)',
+    tfDropOption15m: '۱۵ دقیقه',
+    tfDropOption1h: '۱ ساعته',
+    tfDropOption4h: '۴ ساعته',
+    tfDropOption1d: '۱ روزه',
+    interpretation: 'تفسیر سریع',
+    fundingNeg: 'فاندینگ منفی → شورت‌ها پرداخت می‌کنند → احتمال برگشت صعودی',
+    fundingPos: 'فاندینگ مثبت بالا → لانگ‌ها پرداخت می‌کنند → احتمال اصلاح نزولی',
+    ratioHigh: 'نسبت لانگ/شورت بالا → بازار بیش از حد لانگ است؛ ریسک اصلاح وجود دارد.',
+    conclusion: 'نتیجه‌گیری داده‌ای',
+    positionVolume: 'نسبت موقعیت لانگ/شورت برترین تریدرها',
+    accountRatio: 'نسبت حساب لانگ/شورت',
+    fundingPremium: 'نرخ فاندینگ و پریمیوم',
+    positionVolumeDesc: 'نسبت موقعیت‌های باز برترین تریدرها بر اساس حجم.',
+    accountRatioDesc: 'بر اساس تعداد حساب‌ها (نه حجم).',
+    fundingPremiumDesc: 'نشان‌دهنده تمایل بازار به پرداخت برای نگه‌داری موقعیت.',
+    dataConclusion: 'اگر نسبت موقعیت لانگ/شورت بسیار بالا باشد (مثلاً بالای ۲) و فاندینگ مثبت و بالا باشد، احتمال اصلاح نزولی افزایش می‌یابد. برعکس، اگر نسبت پایین باشد (زیر ۰.۸) و فاندینگ منفی باشد، احتمال بازگشت صعودی بیشتر است.',
+    signalNotes: 'نکات مهم برای ورود/خروج',
+    supportNote: 'ورود نزدیک به حمایت/مقاومت کلیدی انجام شود.',
+    stopNote: 'حد ضرر حداکثر ۲ تا ۳ درصد از قیمت ورود برای معاملات اینترادی.',
+    takeNote: 'حد سود بر اساس مقاومت بعدی یا نسبت ریسک/پاداش حداقل ۱:۲.',
+    marketSt: 'وضعیت بازار: در حال بارگذاری داده‌ها...'
+  },
+  en: {
+    heroTitle: 'Cryptocurrency / USDT (<span id="symLabel">BTCUSDT</span>)',
+    heroSub: 'Last updated',
+    cryptoSelect: 'Cryptocurrency',
+    timeframeSelect: 'Time Frame',
+    high24: '24h High',
+    low24: '24h Low',
+    vol24: '24h Volume',
+    fundingLabel: 'Funding Rate',
+    indicatorsTitle: 'Technical Indicators',
+    indicatorsDesc: 'RSI, SMA, MACD based on live data.',
+    rsiName: 'RSI (14)',
+    smaName: 'SMA 20 vs 50',
+    macdName: 'MACD',
+    avgName: 'Average Price',
+    marketTitle: 'Market Data & Sentiment',
+    marketDesc: 'L/S Ratio, Funding, Premium.',
+    lsRatioName: 'Position Long/Short Ratio',
+    lsAccountName: 'Account Long/Short Ratio',
+    premiumName: 'Premium Index',
+    fundingRateName: '8h Funding Rate',
+    signalTitle: 'Algorithmic Signal Engine',
+    signalSub: 'This output is purely based on technical formulas and is NOT financial advice.',
+    signalDirectionTitle: 'Suggested Direction (Algorithmic)',
+    marketStateTitle: 'Market Status Based on Data',
+    sigDir: 'Calculating...',
+    sigReason: '—',
+    probLabel: 'Success probability for signal: —%',
+    probThreshLabel: 'Minimum probability for notification trigger (%):',
+    thresholdVal: '60%',
+    calcTitle: 'Trade Calculator (Example)',
+    calcDesc: 'This section is for educational purposes. There is no financial recommendation in these calculations.',
+    calcCapital: 'Available Capital (USDT)',
+    calcRisk: 'Trade Risk (% of capital)',
+    calcEntry: 'Entry Price (USDT)',
+    calcStop: 'Stop Loss (USDT)',
+    calcLeverage: 'Leverage',
+    calcTake: 'Take Profit (USDT)',
+    calcRiskAmt: 'Risk Amount (USDT)',
+    calcSize: 'Position Size',
+    calcNotional: 'Notional Value (USDT)',
+    calcProfit: 'Potential Profit',
+    calcLoss: 'Loss at Stop Loss',
+    calcRatio: 'Risk/Reward Ratio',
+    leverageNote: 'Leverage Warning: Higher leverage reduces liquidation distance. With 5x leverage and a 20% adverse move, your position is liquidated. Always calculate liquidation price before entry.',
+    smartTradersTitle: 'Top Traders & Their Data',
+    smartTradersDesc: 'Exact positions of top traders (Leaderboard) are not available due to API limitations. The data below is a valid alternative:',
+    tradersLimit: 'Exact positions of top traders (Leaderboard) are not shown due to API limitations. Information provided is based on public market ratios.',
+    disclaimerTitle: 'Important Disclaimer',
+    disclaimerText: 'This dashboard is purely an educational and informational tool. None of the data, signals, or calculations presented are financial advice, investment recommendations, or trade orders. The cryptocurrency market is highly volatile and risky; you may lose part or all of your capital.',
+    leverageWarning: 'Using leverage (especially above 5x) significantly increases the risk of total capital loss from a small price movement. Always calculate liquidation price, stop loss, and risk/reward ratio personally before entering any trade.',
+    sourcesNote: 'Price and indicator data come from CoinGecko public API and may have a delay.',
+    footer: 'Built for education and data analysis | Cryptocurrency Analyzer Dashboard',
+    live: 'Live',
+    logo: 'Cryptocurrency Analyzer',
+    cryptoDropOptionBTC: 'Bitcoin (BTC)',
+    cryptoDropOptionETH: 'Ethereum (ETH)',
+    cryptoDropOptionSOL: 'Solana (SOL)',
+    cryptoDropOptionXRP: 'Ripple (XRP)',
+    cryptoDropOptionDOGE: 'Dogecoin (DOGE)',
+    tfDropOption15m: '15m',
+    tfDropOption1h: '1h',
+    tfDropOption4h: '4h',
+    tfDropOption1d: '1d',
+    interpretation: 'Quick Interpretation',
+    fundingNeg: 'Negative Funding → Shorts pay → Increased probability of upward reversal.',
+    fundingPos: 'High Positive Funding → Longs pay → Probability of downward correction.',
+    ratioHigh: 'High Long/Short Ratio → Market is overlong; correction risk exists.',
+    conclusion: 'Data Conclusion',
+    positionVolume: 'Top Traders Position Long/Short Ratio',
+    accountRatio: 'Top Traders Account Long/Short Ratio',
+    fundingPremium: 'Funding Rate & Premium Index',
+    positionVolumeDesc: 'Ratio of open positions of top traders by volume.',
+    accountRatioDesc: 'Based on number of accounts (not volume).',
+    fundingPremiumDesc: 'Indicates market willingness to pay to hold positions.',
+    dataConclusion: 'If the long/short position ratio is very high (e.g., above 2) and funding is high and positive, the probability of downward correction increases. Conversely, if the ratio is low (below 0.8) and funding is negative, the probability of upward reversal is higher. Use this data alongside technical analysis, not alone.',
+    signalNotes: 'Important Entry/Exit Notes',
+    supportNote: 'Enter near key support/resistance (use selected time frame chart).',
+    stopNote: 'Stop Loss maximum 2-3% of entry price for intraday trades.',
+    takeNote: 'Take Profit based on next resistance or minimum 1:2 risk/reward ratio.',
+    marketSt: 'Market status: Loading market data...'
+  }
+};
+
 /* ====== NEW ENGINE ====== */
 const coinMap = {BTCUSDT:'bitcoin',ETHUSDT:'ethereum',SOLUSDT:'solana',XRPUSDT:'ripple',DOGEUSDT:'dogecoin'};
 
@@ -297,23 +465,23 @@ function updateUI(ticker,klines,fundingArr,premiumObj,lsRatioData,lsAcctData){
   const fundingRate=fundingArr&&fundingArr.length?+fundingArr[0].fundingRate:null;
   const fundRate=document.getElementById('fundRate');const fundSub=document.getElementById('fundSub');const fundVal=document.getElementById('fundVal');
   if(fundRate)fundRate.textContent=fundingRate!=null?(fundingRate*100).toFixed(4)+'%':'—';
-  if(fundSub)fundSub.textContent=fundingRate!=null?(fundingRate>0?'لانگ‌ها پرداخت می‌کنند':fundingRate<0?'شورت‌ها پرداخت می‌کنند':'خنثی'):'—';
+  if(fundSub){const lang=document.documentElement.lang||'fa';const fundText=fundingRate!=null?(fundingRate>0?(i18n[lang]&&i18n[lang].fundSubPos?i18n[lang].fundSubPos:'لانگ‌ها پرداخت می‌کنند'):(fundingRate<0?(i18n[lang]&&i18n[lang].fundSubNeg?i18n[lang].fundSubNeg:'شورت‌ها پرداخت می‌کنند'):(i18n[lang]&&i18n[lang].fundSubNeutral?i18n[lang].fundSubNeutral:'خنثی'))):'—';fundSub.textContent=fundText;}
   if(fundVal)fundVal.textContent=fundingRate!=null?(fundingRate*100).toFixed(4)+'%':'—';
   if(premiumObj&&document.getElementById('premium'))document.getElementById('premium').textContent=premiumObj.indexPrice?fmtUSD(+premiumObj.indexPrice):fmtUSD(+premiumObj.markPrice);
   const lsRatioVal=lsRatioData&&lsRatioData.length?lsRatioData[0].longShortRatio:null;
   const lsRatioEl=document.getElementById('lsRatio');const lsSubEl=document.getElementById('lsSub');
   if(lsRatioEl)lsRatioEl.textContent=lsRatioVal!=null?fmtNum(+lsRatioVal,2):'—';
-  if(lsSubEl)lsSubEl.textContent=lsRatioVal>1.2?'لانگ غالب':lsRatioVal<0.9?'شورت غالب':'متعادل';
+  if(lsSubEl){const lang=document.documentElement.lang||'fa';lsSubEl.textContent=lsRatioVal>1.2?(i18n[lang]&&i18n[lang].lsSubLong?i18n[lang].lsSubLong:'لانگ غالب'):(lsRatioVal<0.9?(i18n[lang]&&i18n[lang].lsSubShort?i18n[lang].lsSubShort:'شورت غالب'):(i18n[lang]&&i18n[lang].lsSubBalanced?i18n[lang].lsSubBalanced:'متعادل'));}
   const lsAcctVal=lsAcctData&&lsAcctData.length?lsAcctData[0].longShortRatio:null;
   const lsAcctEl=document.getElementById('lsAcct');const lsAccSubEl=document.getElementById('lsAccSub');
   if(lsAcctEl)lsAcctEl.textContent=lsAcctVal!=null?fmtNum(+lsAcctVal,2):'—';
-  if(lsAccSubEl)lsAccSubEl.textContent=lsAcctVal>1.2?'اکثریت حساب لانگ':lsAcctVal<0.9?'اکثریت حساب شورت':'متعادل';
+  if(lsAccSubEl){const lang=document.documentElement.lang||'fa';lsAccSubEl.textContent=lsAcctVal>1.2?(i18n[lang]&&i18n[lang].lsAcctLong?i18n[lang].lsAcctLong:'اکثریت حساب لانگ'):(lsAcctVal<0.9?(i18n[lang]&&i18n[lang].lsAcctShort?i18n[lang].lsAcctShort:'اکثریت حساب شورت'):(i18n[lang]&&i18n[lang].lsAcctBalanced?i18n[lang].lsAcctBalanced:'متعادل'));}
   if(klines&&Array.isArray(klines)&&klines.length>10){computeIndicators(klines,price);}else{
     const rsiVal=document.getElementById('rsiVal');const smaTrend=document.getElementById('smaTrend');const macdVal=document.getElementById('macdVal');const avgPrice=document.getElementById('avgPrice');
     const sigDir=document.getElementById('sigDir');const sigReason=document.getElementById('sigReason');const marketSt=document.getElementById('marketSt');
     if(rsiVal)rsiVal.textContent='—';if(smaTrend)smaTrend.textContent='—';if(macdVal)macdVal.textContent='—';if(avgPrice)avgPrice.textContent='—';
     if(sigDir){sigDir.textContent='WAIT';sigDir.className='sig-value sig-wait';}
-    if(sigReason)sigReason.textContent='Indicators are near neutral. Wait for confirmation.';
+    if(sigReason){const lang=document.documentElement.lang||'fa';sigReason.textContent=(i18n[lang]&&i18n[lang].sigReasonNeutral?i18n[lang].sigReasonNeutral:'Indicators are near neutral. Wait for confirmation.');}
     if(marketSt)marketSt.innerHTML='<strong>Status:</strong> Waiting for market data. Check connection or use VPN.';
     updateProbUI(0,'WAIT');
   }
@@ -339,8 +507,10 @@ function updateProbUI(prob,sig){
   if(!bar||!lbl)return;
   bar.style.width=prob+'%';
   if(sig==='LONG')bar.className='prob-fill long';else if(sig==='SHORT')bar.className='prob-fill short';else bar.className='prob-fill wait';
-  const dt=sig==='LONG'?'LONG':sig==='SHORT'?'SHORT':'WAIT';
-  lbl.textContent='Success probability for '+dt+' signal: '+prob+'%';
+  const lang=document.documentElement.lang||'fa';
+  const dt=sig==='LONG'?(i18n[lang]&&i18n[lang].sigDirLong?i18n[lang].sigDirLong:'LONG'):(sig==='SHORT'?(i18n[lang]&&i18n[lang].sigDirShort?i18n[lang].sigDirShort:'SHORT'):(i18n[lang]&&i18n[lang].sigDirWait?i18n[lang].sigDirWait:'WAIT'));
+  const labelText=(i18n[lang]&&i18n[lang].probLabel)?i18n[lang].probLabel:'Success probability: —%';
+  lbl.textContent=labelText.replace('—%',prob+'%').replace('signal',dt);
 }
 
 function computeIndicators(kl,price){
@@ -357,9 +527,9 @@ function computeIndicators(kl,price){
   const smaEl=document.getElementById('smaTrend');const smaSt=document.getElementById('smaSt');
   const macdEl=document.getElementById('macdVal');const macdSt=document.getElementById('macdSt');
   const avgEl=document.getElementById('avgPrice');
-  if(rsiEl)rsiEl.textContent=fmtNum(rsi,1);if(rsiSt){rsiSt.textContent=rsi>70?'Overbought (Bearish)':rsi<30?'Oversold (Bullish)':'Neutral';rsiSt.className='status '+(rsi>70?'short':rsi<30?'long':'neutral');}
-  if(smaEl)smaEl.textContent=sma20>sma50?'Uptrend (20 > 50)':'Downtrend (20 < 50)';if(smaSt){smaSt.textContent=sma20>sma50?'Uptrend':'Downtrend';smaSt.className='status '+(sma20>sma50?'long':'short');}
-  if(macdEl)macdEl.textContent=fmtNum(macd,2);if(macdSt){macdSt.textContent=macd>0?'Positive (Bullish)':'Negative (Bearish)';macdSt.className='status '+(macd>0?'long':'short');}
+  if(rsiEl)rsiEl.textContent=fmtNum(rsi,1);if(rsiSt){const lang=document.documentElement.lang||'fa';rsiSt.textContent=rsi>70?(i18n[lang]&&i18n[lang].rsiOverboughtText?i18n[lang].rsiOverboughtText:'Overbought (Bearish)'):(rsi<30?(i18n[lang]&&i18n[lang].rsiOversoldText?i18n[lang].rsiOversoldText:'Oversold (Bullish)'):(i18n[lang]&&i18n[lang].rsiNeutralText?i18n[lang].rsiNeutralText:'Neutral'));rsiSt.className='status '+(rsi>70?'short':rsi<30?'long':'neutral');}
+  if(smaEl)smaEl.textContent=sma20>sma50?'Uptrend (20 > 50)':'Downtrend (20 < 50)';if(smaSt){const lang=document.documentElement.lang||'fa';smaSt.textContent=sma20>sma50?(i18n[lang]&&i18n[lang].trendUpText?i18n[lang].trendUpText:'Uptrend'):(i18n[lang]&&i18n[lang].trendDownText?i18n[lang].trendDownText:'Downtrend');smaSt.className='status '+(sma20>sma50?'long':'short');}
+  if(macdEl)macdEl.textContent=fmtNum(macd,2);if(macdSt){const lang=document.documentElement.lang||'fa';macdSt.textContent=macd>0?(i18n[lang]&&i18n[lang].macdPositiveText?i18n[lang].macdPositiveText:'Positive (Bullish)'):(i18n[lang]&&i18n[lang].macdNegativeText?i18n[lang].macdNegativeText:'Negative (Bearish)');macdSt.className='status '+(macd>0?'long':'short');}
   if(avgEl)avgEl.textContent=fmtUSD(sma20);
 
   const fundRate=document.getElementById('fundVal')?.textContent?.includes('%')?parseFloat(document.getElementById('fundVal').textContent)/100:0;
@@ -367,10 +537,12 @@ function computeIndicators(kl,price){
   const lsRatioNum=lsRatioText==='—'?1:parseFloat(lsRatioText);
   const isBull=(rsi<35||(rsi<50&&sma20>sma50&&macd>0))&&fundRate<=0.01&&lsRatioNum<1.3;
   const isBear=(rsi>65||(rsi>50&&sma20<sma50&&macd<0))&&fundRate>=-0.01&&lsRatioNum>1.3;
-  let sig='WAIT';let reason='Indicators are near neutral. Wait for confirmation.';
-  if(isBear&&!isBull){sig='SHORT';reason='RSI overbought / SMA downtrend / MACD negative / High funding / High L/S ratio → Downward correction likely.';}
-  else if(isBull&&!isBear){sig='LONG';reason='RSI oversold / SMA uptrend / MACD positive / Neutral funding / Balanced L/S → Upward reversal likely.';}
-  else if(isBull&&isBear){sig='WAIT';reason='Contradictory indicators. Market is ambiguous. Wait for breakout.';}
+  const lang=document.documentElement.lang||'fa';
+  let sig='WAIT';let reason='';
+  if(isBear&&!isBull){sig='SHORT';reason=(i18n[lang]&&i18n[lang].sigReasonShort)?i18n[lang].sigReasonShort:'RSI overbought / SMA downtrend → Downward correction likely.';}
+  else if(isBull&&!isBear){sig='LONG';reason=(i18n[lang]&&i18n[lang].sigReasonLong)?i18n[lang].sigReasonLong:'RSI oversold / SMA uptrend → Upward reversal likely.';}
+  else if(isBull&&isBear){sig='WAIT';reason=(i18n[lang]&&i18n[lang].sigReasonWait)?i18n[lang].sigReasonWait:'Contradictory indicators. Wait for confirmation.';}
+  else{reason=(i18n[lang]&&i18n[lang].sigReasonNeutral)?i18n[lang].sigReasonNeutral:'Indicators are near neutral. Wait for confirmation.';}
   const sigDir=document.getElementById('sigDir');if(sigDir){sigDir.textContent=sig;sigDir.className='sig-value '+(sig==='LONG'?'sig-long':sig==='SHORT'?'sig-short':'sig-wait');}
   const sigReason=document.getElementById('sigReason');if(sigReason)sigReason.innerHTML='<strong>'+sig+'</strong> — '+reason;
   const prob=getProb(sig,rsi,sma20,sma50,macd,fundRate,lsRatioNum);
@@ -432,7 +604,7 @@ function drawChart(kl){
   ctx.textAlign='left';
   const symForChart=document.getElementById('cryptoDrop')?document.getElementById('cryptoDrop').value:'—';
   const tfForChart=document.getElementById('tfDrop')?document.getElementById('tfDrop').options[document.getElementById('tfDrop').selectedIndex].text:'—';
-  ctx.fillText('Closing price '+tfForChart,padding.left,14);
+  const lang=document.documentElement.lang||'fa';const closingText=(i18n[lang]&&i18n[lang].chartClosing)?i18n[lang].chartClosing:'Closing price';ctx.fillText(closingText+' '+tfForChart,padding.left,14);
   ctx.textAlign='right';
   ctx.fillText(fmtUSD(maxP),w-6,padding.top+12);
   ctx.fillText(fmtUSD(minP),w-6,padding.top+chartH-6);
@@ -462,22 +634,83 @@ document.getElementById('calcTake').addEventListener('input',calcPosition);
 
 document.getElementById('langSel').addEventListener('change',function(){
   const lang=this.value;
+  setLanguage(lang);
+});
+
+function setLanguage(lang){
   document.documentElement.lang=lang;
   document.documentElement.dir=lang==='fa'?'rtl':'ltr';
   document.body.style.direction=lang==='fa'?'rtl':'ltr';
+  document.getElementById('langSel').value=lang;
+  // Update all text elements with data-i18n
   document.querySelectorAll('[data-i18n]').forEach(el=>{
     const key=el.getAttribute('data-i18n');
-    if(i18n[lang]&&i18n[lang][key]!==undefined){if(el.tagName==='INPUT'||el.tagName==='SELECT'){}else{el.innerText=i18n[lang][key];}}
+    if(i18n[lang]&&i18n[lang][key]!==undefined){
+      if(el.tagName==='INPUT'||el.tagName==='SELECT'){
+        // skip input/select inner text updates for now
+      }else{
+        el.innerHTML=i18n[lang][key];
+      }
+    }
   });
-});
+  // Update dropdown options
+  const cryptoDrop=document.getElementById('cryptoDrop');
+  const tfDrop=document.getElementById('tfDrop');
+  if(cryptoDrop){
+    const opts={BTCUSDT:i18n[lang].cryptoDropOptionBTC||'Bitcoin (BTC)',ETHUSDT:i18n[lang].cryptoDropOptionETH||'Ethereum (ETH)',SOLUSDT:i18n[lang].cryptoDropOptionSOL||'Solana (SOL)',XRPUSDT:i18n[lang].cryptoDropOptionXRP||'Ripple (XRP)',DOGEUSDT:i18n[lang].cryptoDropOptionDOGE||'Dogecoin (DOGE)'};
+    Array.from(cryptoDrop.options).forEach(o=>{if(opts[o.value]!==undefined)o.text=opts[o.value];});
+  }
+  if(tfDrop){
+    const opts={"15m":i18n[lang].tfDropOption15m||'15m',"1h":i18n[lang].tfDropOption1h||'1h',"4h":i18n[lang].tfDropOption4h||'4h',"1d":i18n[lang].tfDropOption1d||'1d'};
+    Array.from(tfDrop.options).forEach(o=>{if(opts[o.value]!==undefined)o.text=opts[o.value];});
+  }
+  // Update specific labels
+  const heroTitleEl=document.getElementById('heroTitle');
+  if(heroTitleEl&&i18n[lang]&&i18n[lang].heroTitle!==undefined){heroTitleEl.innerHTML=i18n[lang].heroTitle.replace('<span id="symLabel">', '<span id="symLabel">');}
+  const heroSub=document.getElementById('heroSub');
+  if(heroSub&&i18n[lang]&&i18n[lang].heroSub!==undefined){heroSub.innerHTML=i18n[lang].heroSub+' '+heroSub.innerHTML.split(' ').slice(1).join(' ');}
+  const calcTitle=document.getElementById('calcTitle');
+  if(calcTitle&&i18n[lang]&&i18n[lang].calcTitle!==undefined)calcTitle.textContent=i18n[lang].calcTitle;
+  const sigDir=document.getElementById('sigDir');
+  if(sigDir&&i18n[lang]&&i18n[lang].sigDir!==undefined)sigDir.textContent=i18n[lang].sigDir;
+  const probLbl=document.getElementById('probLbl');
+  if(probLbl&&i18n[lang]&&i18n[lang].probLabel!==undefined)probLbl.textContent=i18n[lang].probLabel;
+  const marketSt=document.getElementById('marketSt');
+  if(marketSt&&i18n[lang]&&i18n[lang].marketSt!==undefined)marketSt.innerHTML='<strong>'+(i18n[lang]&&i18n[lang].statusLabel?i18n[lang].statusLabel:'وضعیت')+':</strong> '+i18n[lang].marketSt;
+  const sigReason=document.getElementById('sigReason');
+  if(sigReason&&i18n[lang]){const sigText=document.getElementById('sigDir')?document.getElementById('sigDir').textContent:'WAIT';sigReason.innerHTML='<strong>'+sigText+'</strong> — '+(i18n[lang].sigReason||'—');}
+  const probThresh=document.querySelector('label[for="probThresh"]');
+  if(probThresh&&i18n[lang]&&i18n[lang].probThreshLabel!==undefined)probThresh.textContent=i18n[lang].probThreshLabel;
+  // Update calculator labels
+  const calcLabels={calcCap:'calcCapital',calcRisk:'calcRisk',calcEnt:'calcEntry',calcStop:'calcStop',calcLev:'calcLeverage',calcTake:'calcTake',calcRiskAmt:'calcRiskAmt',calcSize:'calcSize',calcNot:'calcNotional',calcProf:'calcProfit',calcLoss:'calcLoss',calcRatio:'calcRatio'};
+  for(const [elId, key] of Object.entries(calcLabels)){
+    const labelEl=document.querySelector('label[for="'+elId+'"]');
+    if(labelEl&&i18n[lang][key]!==undefined)labelEl.textContent=i18n[lang][key];
+  }
+  // Update stat labels
+  const statLabels={high24:'high24',low24:'low24',vol24:'vol24',fundRate:'fundingLabel'};
+  for(const [elId, key] of Object.entries(statLabels)){
+    const labelEl=document.getElementById(elId)?.previousElementSibling;
+    if(labelEl&&labelEl.classList.contains('label')&&i18n[lang][key]!==undefined)labelEl.textContent=i18n[lang][key];
+  }
+  // Update indicator names
+  const indLabels={rsiVal:'rsiName',smaTrend:'smaName',macdVal:'macdName',avgPrice:'avgName'};
+  for(const [valId, nameKey] of Object.entries(indLabels)){
+    const nameEl=document.getElementById(valId)?.previousElementSibling?.previousElementSibling;
+    // This is fragile; instead update the .name elements based on their content if needed.
+  }
+  // Re-apply probability label based on current signal
+  const dt=document.getElementById('sigDir')?.textContent||'WAIT';
+  if(probLbl&&i18n[lang][key]!==undefined&&probLbl.textContent.indexOf('Success')>-1||probLbl.textContent.indexOf('احتمال')>-1){
+    probLbl.textContent=(i18n[lang].probLabel||'Success probability: —%').replace('signal', dt);
+  }
+  localStorage.setItem('lang', lang);
+}
 
 function initLang(){
   const saved=localStorage.getItem('lang');
   const lang=saved||'fa';
-  document.getElementById('langSel').value=lang;
-  document.documentElement.lang=lang;
-  document.documentElement.dir=lang==='fa'?'rtl':'ltr';
-  document.body.style.direction=lang==='fa'?'rtl':'ltr';
+  setLanguage(lang);
 }
 
 function init(){
@@ -489,5 +722,5 @@ function init(){
 if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init);}
 else{init();}
 </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a1f9856fcb7f2608',t:'MTc4NDc5NzUwMw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a1f9bb1ae85fc6bf',t:'MTc4NDc5OTcwMg=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
